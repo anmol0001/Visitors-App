@@ -1,0 +1,23 @@
+<%- include("./partials/header")   %>
+<nav>
+    <form action="/" method="GET">
+        <button type="submit" class="home"><i class="fas fa-home"></i></button>
+    </form>
+</nav>
+
+    <div class='outer_div'>
+        <div class="inner_div1">
+            <img src="./images/index.svg">
+        </div>
+        <div class="inner_div2">
+            <div class="portal">
+                <h1> Visitor App</h1>
+                <div class="options_btn">
+                    <form action="/Checkin"><button class="btn" type="submit" style="font-size: 1.2rem;">CheckIn</button></form>
+                    <form action="/Checkout"><button class="btn" type="submit" style="font-size: 1.2rem;">CheckOut</button></form>
+                    <form action="/Enqury"><button class="btn" style="font-size: 1.2rem;">Enquiry</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("./partials/footer")   %>

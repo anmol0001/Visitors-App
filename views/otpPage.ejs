@@ -1,0 +1,32 @@
+<%- include("./partials/header")   %>
+<nav>
+    <form action="/" method="GET">
+        <button type="submit" class="home"><i class="fas fa-home"></i></button>
+    </form>
+</nav>
+
+    <div class="otp_container">
+      
+            <img src="./images/checkin2.svg" style="width:100%;"><br><br>
+        
+
+        <strong style="color:red;">Please enter the otp to verify your account<br>
+            A code has been sent to your Email </strong>
+
+        <form action="/verify/?id=<%- id %>" method="POST">
+            <input type="text" placeholder="Enter OTP" name="otp" required><br>
+            <button class="btn" type="submit" style="width:100px">Verify</button>
+        </form>
+         <form action="/resend?id=<%- id %>" method="POST">
+             <button class="btn" type="submit" style="width:120px; margin-top:-30px; background: none; color:#6C63FF;">Resend OTP</button>
+         </form>
+    
+    </div>
+
+
+    
+
+
+
+
+<%- include("./partials/footer")   %>

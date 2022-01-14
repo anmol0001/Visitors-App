@@ -1,0 +1,48 @@
+<%- include("./partials/header")   %>
+
+<nav>
+    <form action="/" method="GET">
+    <button type="submit" class="home"><i class="fas fa-home"></i></button>
+</form>
+</nav>
+
+    <div class='checkin_conatiner'>
+        <div class="checkin_div1">
+            <img src="./images/checkin4.svg">
+        </div>
+        <div class="checkin_div2">
+            <div class="checkin_form">
+                <h1>CheckIn Form</h1>
+                <% if(msg !=''){ %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%= msg %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <% } %>
+
+              
+
+
+
+                <form action="/checkin" method="POST">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" name="username" placeholder="Name" style="width:20px" required>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text">Purpose of Visit</span>
+                        <textarea class="form-control" placeholder="Write Something..." aria-label="With textarea" name="purpose" required></textarea>
+                    </div>  
+                    <div class="col-12">
+                        <button class="btn" type="submit">Submit form</button>
+                      </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+<%- include("./partials/footer")   %>
