@@ -8,7 +8,7 @@ const cookieParser= require('cookie-parser');
 const mongoose=require('mongoose');
 const portalRoutes=require("./routes/portalRoutes");
 
-if(process.env.NODE_ENV === 'production')
+if(process.env.NODE_ENV !== 'production')
    require('dotenv').config();
 
 mongoose.connect(process.env.MONGO_URL)
