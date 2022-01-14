@@ -4,7 +4,7 @@ const otpGenerator = require('otp-generator')
 const sqMail=require('@sendgrid/mail');
 const visitor=require('../model/visitor');
 
-if(process.env.NODE_ENV === 'production')
+if(process.env.NODE_ENV !== 'production')
    require('dotenv').config();
 
 const API_KEY = process.env.MY_API_KEY;
